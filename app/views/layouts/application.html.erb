@@ -7,8 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render 'layouts/header' %>		<!--calls  _header.html.erb-->
 
-<%= yield %>
+
+<div class="container">		<!--code to include a page content in the layout + container is a bootstrap function-->
+	
+	<% flash.each do |key, value| %>		<!--Initialization of the flash messages for error display -->
+	<div class="alert alert-<%= key %>"><%= value %></div>
+	<% end %>
+
+
+	<%= yield %>
+
+	<%= debug(params) if Rails.env.development? %>
+</div>
+
 
 </body>
 </html>

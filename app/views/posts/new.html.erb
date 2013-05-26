@@ -1,2 +1,19 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h1>Create a new post</h1>
+
+
+
+<div class="row">
+	<div class="span6 offset3">
+
+		<%= form_for(@post) do |f| %>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+		<%= f.label :content %>
+		<%= f.text_field :content %>
+
+		<%= f.submit "Create a new post", class: "btn btn-large btn-primary" %>
+		
+		<% end %>
+
+	</div>
+</div>

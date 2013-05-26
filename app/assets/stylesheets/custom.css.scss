@@ -8,7 +8,7 @@ html {
 }
 
 body {
-	padding-top: 120px;			/*Jach allows to put space from the header */
+	padding-top: 100px;			/*Jach allows to put space from the header */
 }
 
 section {
@@ -30,11 +30,31 @@ textarea {
 }
 
 .navbar-inner {
-  background-color: #333333; 
+  background-color: #333333;
   background-image: none;		/*it seems boostrap uses a backgound image*/
   background-repeat: no-repeat;
   filter: none;
 }
 
+/*Upper Menu*/
 
-.nav {color: #FFFFFF	}	/* doesn't seem to give the desired result xD*/
+.navbar .nav > li > a {
+	color: white;
+    float: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 white;	}	/* Gives the li a white color xD*/
+
+
+.navbar .nav > li > a:hover {
+
+	background-color: transparent;
+	color: #777777;
+	text-decoration: none;
+}
+
+.title {
+	color: white;
+
+}
+
