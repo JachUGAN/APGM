@@ -1,0 +1,40 @@
+@import "bootstrap";
+
+
+
+/* universal */
+html {
+	overflow-y: scroll;
+}
+
+body {
+	padding-top: 120px;			/*Jach allows to put space from the header */
+}
+
+section {
+	overflow: auto;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.center {			/*associates the center class with the text-align: center property. In other words,the dot . in .center indicates that the rule styles a class*/
+	
+	text-align: center;
+
+}
+
+.center h1 {
+	margin-bottom: 10px;
+}
+
+.navbar-inner {
+  background-color: #333333; 
+  background-image: none;		/*it seems boostrap uses a backgound image*/
+  background-repeat: no-repeat;
+  filter: none;
+}
+
+
+.nav {color: #FFFFFF	}	/* doesn't seem to give the desired result xD*/
