@@ -7,6 +7,8 @@ APGM::Application.routes.draw do
   root to: 'posts#home'       #routes the main page to home
 
   match '/contact', to: 'posts#contact'
+  match '/new_post', to: 'posts#new'
+  match '/edit_post', to: 'posts#edit'
 
 
   # The priority is based upon order of creation:

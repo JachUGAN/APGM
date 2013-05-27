@@ -12,25 +12,26 @@
 		<h1>Welcome to the APGM website</h1>
 		<small>Work in Progress</small>
 	</div>
+	
+	<div class="row">
+	  <div class="span12">
+	    <%=link_to "New Post", new_post_path %>		<!--Link to the new post page -->
+	    <div class="row">
+	      <div class="span9">
 
-		<div class="row">
-		  <div class="span12">
-		    Level 1 column
-		    <div class="row">
-		      <div class="span9">
+					<% @posts.each do |post| %>
+						<h2> <%= link_to post.title, post %></h2>		<!-- rails automatically links to the post id when one clicks on it -->
+						<p> <%= post.content %> </p>				<!--the = is only used when we want to display something-->
+						<p> <%= link_to "Edit Post", edit_post_path(post) %></p>
+						<hr />			<!--Horizontal line to separate the posts-->
+					<%end%>
+				
+				</div>
 
-						<% @posts.each do |post| %>
-							<h2> <%= post.title %></h2>		<!--the = is only used when we want to display something-->
-							<p> <%= post.content %> </p>	
-							<hr />			<!--Horizontal line to separate the posts-->
-						<%end%>
-					
-					</div>
-
-		      <div class="span3">Level 2</div>
-		    </div>
-		  </div>
-		</div>
+	      <div class="span3">Level 2 (Future Aside)</div>
+	    </div>
+	  </div>
+	</div>
 	
 
 <p>News</p>
