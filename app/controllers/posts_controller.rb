@@ -27,7 +27,7 @@ class PostsController < ApplicationController
     
   end
 
-  def update      #This is associated with the show post function above
+  def update      #This is associated with the edit post function above
     @post = Post.find(params[:id])
 
     if @post.update_attributes(params[:post])
