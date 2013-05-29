@@ -1,14 +1,18 @@
 APGM::Application.routes.draw do
   resources :posts      #Jach: This insures that the application answers to the RESTful URI, basically it will respond to a create action
-  
+
+  resources :users
 
   get "posts/new"
+  get "users/new"
 
   root to: 'posts#home'       #routes the main page to home
 
   match '/contact', to: 'posts#contact'
   match '/new_post', to: 'posts#new'
   match '/edit_post', to: 'posts#edit'
+
+  match '/newuser', to: 'users#new_user'
 
 
   # The priority is based upon order of creation:
