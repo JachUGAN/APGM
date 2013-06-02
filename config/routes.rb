@@ -4,7 +4,7 @@ APGM::Application.routes.draw do
   resources :users
 
   get "posts/new"
-  get "users/new"
+ 
 
   root to: 'posts#home'       #routes the main page to home
 
@@ -13,7 +13,7 @@ APGM::Application.routes.draw do
   match '/edit_post', to: 'posts#edit'
 
   match '/newuser', to: 'users#new_user'
-
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
