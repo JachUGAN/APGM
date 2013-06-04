@@ -3,7 +3,7 @@ APGM::Application.routes.draw do
 
   resources :users
 
-  get "posts/new"
+  #get "posts/new"
  
 
   root to: 'posts#home'       #routes the main page to home
