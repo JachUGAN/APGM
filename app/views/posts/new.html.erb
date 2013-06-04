@@ -7,6 +7,7 @@
 	<div class="span6 offset0">
 
 		<%= form_for(@post) do |f| %>
+		<%= render 'shared/error_messages_posts' %>
 		<%= f.label :title %>
 		<%= f.text_field :title %>
 		<%= f.label :content %>

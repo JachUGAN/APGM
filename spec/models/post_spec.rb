@@ -12,5 +12,28 @@
 require 'spec_helper'
 
 describe Post do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before do 
+		@post = Post.new(title: "example title", content: "The is some content to test the Post model using rspec and capybara")
+	end
+
+
+	subject { @post }	 #subject { @post } lets us leave off @post from the should (@post.should )
+
+	it { should respond_to(:title) }
+	it { should respond_to(:content) }
+
+	it { should be_valid }
+
+	#Attributes presence tests
+
+	describe "when title is not present" do
+		before { @post.title = " " }
+		it { should_not be_valid }
+	end
+
+	describe "when content is not present" do
+		before { @post.content = " " }
+		it { should_not be_valid }
+	end
+
 end

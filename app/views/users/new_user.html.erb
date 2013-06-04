@@ -7,6 +7,8 @@
 	<div class="span6 offset0">
 
 		<%= form_for(@user) do |f| %>
+		
+		<%= render 'shared/error_messages' %>	<!--Partial function defined in views/shared directory by convention-->
 
 		<%= f.label :first_name %>
 		<%= f.text_field :first_name %>

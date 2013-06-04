@@ -27,6 +27,7 @@ describe "User pages" do
 		end
 
 		describe "with valid information" do
+			before { visit newuser_path }
 			before do
 				fill_in "first_name", with: "ex_fname"
 				fill_in "last_name", with: "ex_lname"
