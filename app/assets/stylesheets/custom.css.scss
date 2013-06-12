@@ -13,7 +13,7 @@ html {
 }
 
 body {
-	padding-top: 100px;			/*Jach allows to put space from the header */
+	padding-top: 120px;			/*Jach allows to put space from the header */
 }
 
 section {
@@ -30,6 +30,11 @@ textarea {
 
 }
 
+.title {
+	font-size: 20px;
+	padding-top: 10px;
+}
+
 .center h1 {
 	margin-bottom: 10px;
 }
@@ -39,6 +44,13 @@ textarea {
   background-image: none;		/*it seems boostrap uses a backgound image*/
   background-repeat: no-repeat;
   filter: none;
+  height: 100px; 	
+}
+
+
+.login-button {
+	padding-left: 700px;
+/*padding-top: 20px;*/
 }
 
 /*Upper Menu*/
@@ -46,7 +58,7 @@ textarea {
 .navbar .nav > li > a {
 	color: white;
     float: none;
-    padding: 10px 15px;
+    padding: 35	px 15px;
     text-decoration: none;
     text-shadow: 0 1px 0 white;	}	/* Gives the li a white color xD*/
 
@@ -84,4 +96,18 @@ input, textarea, select, .uneditable-input {
 .field_with_errors {
 	@extend .control-group;
 	@extend .error;
+}
+
+
+/*Hero Unit*/
+
+.hero-unit {
+	background-color: #EEEEEE;
+  border-radius: 6px 6px 6px 6px;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
 }
