@@ -21,6 +21,7 @@ class User < ActiveRecord::Base
 	
 	#bafore_save { |user| user.username = username.downcase}   NOT SURE ABOUT THIS YET
 	before_save { |user| user.email = email.downcase }
+  before_save :create_remember_token
 
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	VALID_ROLE_REGEX = /\Aauthor|super|normal|admin\z/i 			#Valid roles definition
@@ -32,4 +33,10 @@ class User < ActiveRecord::Base
   validates :role, presence: true, format: { with: VALID_ROLE_REGEX }	
   validates :password, presence: true, length: { minimum: 6 }			#virtual attribute only stored in memory
   validates :password_confirmation, presence: true
+
+  private 
+    def create_remember_token
+    self.remember_token = SecureRandom.urlsafe_base64
+  end
+
 end

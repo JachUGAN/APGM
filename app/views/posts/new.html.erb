@@ -4,18 +4,36 @@
 
 
 <div class="row">
-	<div class="span6 offset0">
-
+	<div class="span9 offset0">
+		<div class="hero-unit">
 		<%= form_for(@post) do |f| %>
 		<%= render 'shared/error_messages_posts' %>
 		<%= f.label :title %>
-		<%= f.text_field :title %>
+		<%= f.text_field :title, placeholder: "Enter text" %>		
 		<%= f.label :content %>
-		<%= f.text_area :content %>
+		<%= f.text_area :content, class: 'wysihtml5', placeholder: "Enter text ..." %>
+		
+
 		<br />
 		<%= f.submit "Create a new post", class: "btn btn-small btn-primary" %>
 		
 		<% end %>
+		</div>
+
+
+
+		<script type="text/javascript">
+			
+			$('.wysihtml5').wysihtml5({
+			"font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+			"emphasis": true, //Italics, bold, etc. Default true
+			"lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+			"html": false, //Button which allows you to edit the generated HTML. Default false
+			"link": true, //Button to insert a link. Default true
+			"image": false, //Button to insert an image. Default true,
+			"color": true //Button to change color of font  
+			});
+		</script>
 
 	</div>
 </div>

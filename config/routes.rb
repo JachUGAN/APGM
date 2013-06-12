@@ -1,6 +1,6 @@
 APGM::Application.routes.draw do
   resources :posts      #Jach: This insures that the application answers to the RESTful URI, basically it will respond to a create action
-
+  resources :sessions, only: [:new, :create, :destroy]    #we don't nees the edit and show actions
   resources :users
 
   #get "posts/new"
@@ -14,6 +14,8 @@ APGM::Application.routes.draw do
 
   match '/newuser', to: 'users#new_user'
   
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete  #via: :delete for the signout route, which indicated that it should be invoked using an HTTP DELETE request.
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

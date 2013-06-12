@@ -47,10 +47,11 @@ textarea {
   height: 100px; 	
 }
 
-
-.login-button {
-	padding-left: 700px;
-/*padding-top: 20px;*/
+.btn-login {
+	background-color: green;
+	width: 60px;
+	margin-left: 400px;
+	margin-top: 10px;
 }
 
 /*Upper Menu*/
@@ -58,7 +59,7 @@ textarea {
 .navbar .nav > li > a {
 	color: white;
     float: none;
-    padding: 35	px 15px;
+    padding: 25px 15px;
     text-decoration: none;
     text-shadow: 0 1px 0 white;	}	/* Gives the li a white color xD*/
 
@@ -110,4 +111,35 @@ input, textarea, select, .uneditable-input {
   line-height: 30px;
   margin-bottom: 30px;
   padding: 30px;
+}
+
+/* WYSIHtml5 Rich Text Editor */
+
+.wysihtml5 {
+	height: 200px;
+}
+
+
+ul.wysihtml5-toolbar:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+ul.wysihtml5-toolbar {
+    display: block;
+    margin-bottom: 7px;
+    padding: 0;
+
+}
+ul {
+    list-style: none outside none;
+}
+ul, ol {
+    margin: 0 0 9px 25px;
+    padding: 0;
+}
+
+ul li{
+  display: inline;
+  margin: 2px;
 }

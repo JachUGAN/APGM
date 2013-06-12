@@ -1,4 +1,4 @@
 <% provide(:title, @post.title)%>	 <!-- we pass @post.title to have the article title up there -->
 <h1><%= @post.title %></h1>
-<p><%= @post.content %></p>
+<p><%=raw @post.content %></p>
 <small><%= @post.created_at %></small>
