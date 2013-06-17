@@ -5,6 +5,7 @@ gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
 gem 'cancan'
 gem 'bootstrap-wysihtml5-rails'
+gem 'tinymce-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

@@ -7,13 +7,16 @@ box-sizing: border-box;
 }
 
 
+$grayMediumLight: #eaeaea;
+
 /* universal */
 html {
 	overflow-y: scroll;
 }
 
 body {
-	padding-top: 120px;			/*Jach allows to put space from the header */
+	padding-top: 80px;			/*Jach allows to put space from the header */
+	border-width: 1024px;
 }
 
 section {
@@ -44,24 +47,39 @@ textarea {
   background-image: none;		/*it seems boostrap uses a backgound image*/
   background-repeat: no-repeat;
   filter: none;
-  height: 100px; 	
+  height: 40px; 	
+
 }
 
 .btn-login {
-	background-color: green;
+
+	background-color: white;
 	width: 60px;
-	margin-left: 400px;
-	margin-top: 10px;
+	position: left;
+	margin-left: 300px;
+	padding-top: 6px;
+	
 }
 
 /*Upper Menu*/
 
+.nav {
+	display: inline-block;
+	border: 1px solid white;	/*for testing purposes*/
+}
+
 .navbar .nav > li > a {
-	color: white;
+
+		color: white;
     float: none;
-    padding: 25px 15px;
+    padding: 7px 15px;
+    /*padding: 5px 15px;*/
     text-decoration: none;
-    text-shadow: 0 1px 0 white;	}	/* Gives the li a white color xD*/
+    text-shadow: none;
+    font-family: "Verdana", Helvetica, Arial, sans-serif;
+		font-size: 14px;
+
+    }	/* Gives the li a white color xD*/
 
 
 .navbar .nav > li > a:hover {
@@ -72,8 +90,36 @@ textarea {
 }
 
 .title {
+	display: inline-block;	
 	color: white;
+	padding: 0px;
+	border: 1px solid white;
 
+}
+
+/*Profile Dropdown Menu */
+
+.dropdown-menu {
+	padding: 5px 0;
+	margin: 15px 0 0	;
+	background-color: white;
+	left: -0px;
+
+}
+
+.dropdown-menu > li > a {
+	display: inline-block;
+	padding: 3px 5px;
+	line-height: 15px;
+
+}
+
+.divider {
+    background-color: black;
+    border-bottom: 1px solid #FFFFFF;
+    height: 1px;
+    margin: 9px 1px;
+    overflow: hidden;
 }
 
 /* forms (new user, new article)*/
@@ -113,6 +159,12 @@ input, textarea, select, .uneditable-input {
   padding: 30px;
 }
 
+/* Articles */
+
+#ArticleBreakLine {
+	font-size: 50px;
+}
+
 /* WYSIHtml5 Rich Text Editor */
 
 .wysihtml5 {
@@ -143,3 +195,39 @@ ul li{
   display: inline;
   margin: 2px;
 }
+
+
+/*User Profile */
+.UserAvatar {
+	display: block;
+}
+.UserInfo {
+	display: inline-block;
+	font-size: 20px;
+}
+
+/*Footer*/
+
+/* footer */
+footer {		 /*Fully Nested*/
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid $grayMediumLight;
+	color: $grayLight;
+	a {
+		color: $gray;
+		}
+	small {
+		float: left;
+}
+ul {
+	float: right;
+	list-style: none;
+
+	li {
+		float: left;
+		margin-left: 10px;
+	}
+}
+}
+

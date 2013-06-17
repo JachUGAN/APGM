@@ -11,6 +11,10 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  password_digest :string(255)
+#  remember_token  :string(255)
+#  rank            :string(255)
+#  city            :string(255)
+#  description     :text
 #
 
 #Invoke Annotate with bundle exec annotate --position before

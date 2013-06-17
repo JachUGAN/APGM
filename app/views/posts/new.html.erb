@@ -9,10 +9,12 @@
 		<%= form_for(@post) do |f| %>
 		<%= render 'shared/error_messages_posts' %>
 		<%= f.label :title %>
-		<%= f.text_field :title, placeholder: "Enter text" %>		
+		<%= f.text_field :title, placeholder: "Enter a Title.." %>		
 		<%= f.label :content %>
-		<%= f.text_area :content, class: 'wysihtml5', placeholder: "Enter text ..." %>
-		
+		<%= f.text_area :content, class: 'tinymce' %>
+
+		<%= tinymce %> 		<!--tinymce initializer-->
+
 
 		<br />
 		<%= f.submit "Create a new post", class: "btn btn-small btn-primary" %>

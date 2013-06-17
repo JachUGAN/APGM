@@ -4,34 +4,7 @@
 		<div class="navbar-inner">
 			<div class="container">
 				
-				<a class="title">Association pour la Promotion du Go au Maroc</a>		<!-- <a> is an inline component -->
-
 				
-				<!--<%=link_to "Login", "newuser_path", class: "btn-login btn btn-small btn-secondary" %>	-->
-
-							<% if signed_in? %>
-								<ul class="nav pull-right">
-								<li><%= link_to "Users", '#' %></li>
-								<liid="fat-menu" class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-										<%=current_user.email%>			<!--Jach: The was to display the current user's attributes :) -->
-										Account<b class="caret"></b>
-									</a>
-									<ul class="dropdown-menu">
-										<li><%= link_to "Profile", current_user %></li>
-										<li><%= link_to "Settings", edit_user_path(current_user) %></li>
-										<li class="divider"></li>
-										<li>
-											<%= link_to "Sign out", signout_path, method: "delete" %>
-										</li>
-									</ul>
-								</li>
-							<% else %>
-								<!--<a><%= link_to "Sign in", signin_path %></a>      OLD TO BE ERASED LATER ON-->			
-								<%=link_to "Login", signin_path, class: "btn-login btn btn-small btn-secondary" %>
-							<% end %>
-							</ul>
-
 				<nav >
 					<ul class="nav pull-left">
 						
@@ -42,6 +15,35 @@
 						<li><%= link_to "Contact", contact_path %></li>		<!--Jach: Link Definition is in Routes -->
 					</ul>
 				</nav>
+
+				
+				<!--<%=link_to "Login", "newuser_path", class: "btn-login btn btn-small btn-secondary" %>	-->
+
+							<% if signed_in? %>
+								<ul class="nav pull-right">
+								<liid="fat-menu" class="dropdown">
+									<a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
+										<%=current_user.email%>			<!--Jach: The was to display the current user's attributes :) -->
+										<b class="caret"></b>
+									</a>
+									<ul class="dropdown-menu">
+										<li><%= link_to "Profile", current_user %></li>
+										<li><%= link_to "Settings", edit_user_path(current_user) %></li>
+										<li><%= link_to "Users", '#' %></li>
+										<li class="divider"></li>
+										<li>
+											<hr id="ArticleBreakLine">
+											<%= link_to "Sign out", signout_path, method: "delete" %>
+										</li>
+									</ul>
+								</li>
+							<% else %>
+								<!--<a><%= link_to "Sign in", signin_path %></a>      OLD TO BE ERASED LATER ON-->			
+								<%=link_to "Login", signin_path, class: "btn-login btn btn-small btn-secondary" %>
+							<% end %>
+							</ul>
+
+				
 				
 				
 

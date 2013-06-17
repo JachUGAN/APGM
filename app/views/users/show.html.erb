@@ -1,22 +1,29 @@
 <%provide(:title, @user.username)%>
 <div class="row">
-	<aside class="span4">
-		<section>
-			<h1>
-				<%= gravatar_for @user %>
-				<%= @user.first_name + " " + @user.last_name %>
-
-			</h1>
-		</section>
-	</aside>
+	
 	<body>
-		<p>
-		
+		<div class="span12">
+			<h1 class="UserAvatar">
+				<%= gravatar_for @user %>
+				<%= @user.username.upcase %> 	
+				<br>
+			</h1>
 
-		<%= @user.email %>
-		<%= @user.role %>
+			<p class="UserInfo">
 		
-		</p>
+			Name:         <%= @user.first_name.capitalize + " " + @user.last_name.capitalize %> <br>
+			Email: 		  <%= @user.email %> <br>
+			Account Type: <%= @user.role.capitalize %> <br>
+			Member Since: <%= @user.created_at%>
+
+			</p>
+
+		</div>
+		
 
 	</body>
+
+	<aside class="span4">
+		
+	</aside>
 </div>
