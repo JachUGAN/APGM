@@ -9,13 +9,64 @@
 				<br>
 			</h1>
 
+			
 			<p class="UserInfo">
-		
-			Name:         <%= @user.first_name.capitalize + " " + @user.last_name.capitalize %> <br>
-			Email: 		  <%= @user.email %> <br>
-			Account Type: <%= @user.role.capitalize %> <br>
-			Member Since: <%= @user.created_at%>
+				<table class="profile">
 
+					<tr>
+						<th> Name: </th>
+						<td> <%= @user.first_name.capitalize + " " + @user.last_name.capitalize %> </td>
+					</tr>
+
+					<tr>
+						<th> Email: </th>
+						<td> <%= @user.email %> </td>
+					</tr>
+
+					<tr>
+						<th> Account Type: </th>
+						<td> <%= @user.role.capitalize %> </td>
+					</tr>
+
+					<tr>
+						<th> Rank: </th>
+						<td> 
+							<% if @user.rank? %>
+						 	<%=@user.rank %>
+						 	<% else %>
+						 	<%= "-" %>
+						 	<% end %>
+						 </td>
+					</tr>
+
+					<tr>
+						<th> City: </th>
+						<td>
+							<% if @user.city? %>
+						 	<%=@user.city.capitalize %>
+						 	<% else %>
+						 	<%= "-" %>
+						 	<% end %>
+						</td>
+					</tr>
+
+					<tr>
+						<th> Description: </th>
+						<td>
+							<% if @user.description? %>
+						 	<%=@user.description %>
+						 	<% else %>
+						 	<%= "-" %>
+						 	<% end %>
+						</td>
+					</tr>
+
+					<tr>
+						<th> Member Since: </th>
+						<td> <%= @user.created_at%> </td>
+					</tr>
+
+				</table>
 			</p>
 
 		</div>

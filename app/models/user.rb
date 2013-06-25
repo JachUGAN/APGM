@@ -20,7 +20,7 @@
 #Invoke Annotate with bundle exec annotate --position before
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :first_name, :last_name, :role, :username, :password, :password_confirmation
+  attr_accessible :email, :first_name, :last_name, :username, :role, :rank, :city, :description, :password, :password_confirmation
   has_secure_password
 	
 	#bafore_save { |user| user.username = username.downcase}   NOT SURE ABOUT THIS YET
@@ -37,7 +37,9 @@ class User < ActiveRecord::Base
   validates :role, presence: true, format: { with: VALID_ROLE_REGEX }	
   validates :password, presence: true, length: { minimum: 6 }			#virtual attribute only stored in memory
   validates :password_confirmation, presence: true
-
+  validates :rank, length: { maximum: 10 }      # rank, city, and description shouldn't be compulsory so the presence isn't necessary
+  validates :city, length: { maximum: 50 }
+  validates :description, length: { maximum: 200 }
   private 
     def create_remember_token
     self.remember_token = SecureRandom.urlsafe_base64

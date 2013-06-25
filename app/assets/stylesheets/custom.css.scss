@@ -206,6 +206,30 @@ ul li{
 	font-size: 20px;
 }
 
+.profile {
+    td {
+    	padding: 10px;
+    	text-align: left;
+    	}
+    th {
+    	text-align: left;
+    }
+    
+}
+
+/*Events*/
+
+
+.eventsaside {				/*I'll HAVE TO TIDY THIS UP AFTER THE EVENTS CONTROLLER IS IMPLEMENTED*/
+border-left: 1px solid black;
+border-color: black;
+width: 100%;
+height: auto;
+padding-left: 3px;
+height: 500px; 
+}
+
+
 /*Footer*/
 
 /* footer */
