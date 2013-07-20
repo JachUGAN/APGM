@@ -1,8 +1,8 @@
 module SessionsHelper
 
-def sign_in(user)
-		cookies.permanent[:remember_token] = user.remember_token
-		self.current_user = user 		#The use if self here is necessary else rails will just create a local variable called current_user
+	def sign_in(user)
+			cookies.permanent[:remember_token] = user.remember_token
+			self.current_user = user 		#The use if self here is necessary else rails will just create a local variable called current_user
 	end
 
 	def current_user=(user)		#defines the assignement that is used above p352 hart
@@ -22,5 +22,5 @@ def sign_in(user)
 		self.current_user = nil
 		cookies.delete(:remember_token)
 	end
-
+	
 end

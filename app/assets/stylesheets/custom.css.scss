@@ -27,6 +27,17 @@ textarea {
 	resize: vertical;
 }
 
+.container {
+	width: 1024px;
+	// height: 800px; Creates some huge ass problem :/;
+	height: auto;
+
+}
+
+.navbar .container {
+	width: 1024px;
+}
+
 .center {			/*associates the center class with the text-align: center property. In other words,the dot . in .center indicates that the rule styles a class*/
 	
 	text-align: center;
@@ -52,26 +63,28 @@ textarea {
 }
 
 .btn-login {
-
+	font-size: 14px;
+	font-weight: bold;
 	background-color: white;
-	width: 60px;
-	position: left;
-	margin-left: 300px;
+	width: 80px;
+	right: 450px;
+	position: absolute;
+	//margin-left: 300px;
 	padding-top: 6px;
-	
+
 }
 
 /*Upper Menu*/
 
 .nav {
 	display: inline-block;
-	border: 1px solid white;	/*for testing purposes*/
+	margin-left: -50px;
+	//border: 1px solid white;	/*for testing purposes*/
 }
 
 .navbar .nav > li > a {
 
 		color: white;
-    float: none;
     padding: 7px 15px;
     /*padding: 5px 15px;*/
     text-decoration: none;
@@ -87,6 +100,12 @@ textarea {
 	background-color: transparent;
 	color: #777777;
 	text-decoration: none;
+}
+
+/**********************************/
+
+.navbar .nav > li > a:active {			
+	color: #777777;			//NOT WORKING
 }
 
 .title {
@@ -165,6 +184,12 @@ input, textarea, select, .uneditable-input {
 	font-size: 50px;
 }
 
+/* Events */
+
+.EventTitle {
+	color: #0088cc;
+}
+
 /* WYSIHtml5 Rich Text Editor */
 
 .wysihtml5 {
@@ -221,12 +246,13 @@ ul li{
 
 
 .eventsaside {				/*I'll HAVE TO TIDY THIS UP AFTER THE EVENTS CONTROLLER IS IMPLEMENTED*/
-border-left: 1px solid black;
-border-color: black;
+border-left: 2px solid #eeeeee;
+border-color: #eeeeee;
 width: 100%;
 height: auto;
-padding-left: 3px;
-height: 500px; 
+padding-left: 15px;
+height: auto;
+min-height: 400px; 
 }
 
 

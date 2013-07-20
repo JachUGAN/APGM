@@ -6,7 +6,7 @@ gem 'bcrypt-ruby'
 gem 'cancan'
 gem 'bootstrap-wysihtml5-rails'
 gem 'tinymce-rails'
-
+gem 'validates_timeliness'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

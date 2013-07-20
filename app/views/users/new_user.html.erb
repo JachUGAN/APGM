@@ -24,7 +24,9 @@
 
 		<%= f.label :role %>
 		
-		<%= f.select :role, [['Normal','normal'],['Author','author'],['Admin','admin'],['Super Admin','super']]%>
+		<!-- I need to restrict Admin and Super Creation to  Super Admin only (not even sure we should have more than 1 super) -->
+
+		<%= f.select :role, [['Normal','normal'],['Author','author'],['Admin','admin'],['Super Admin','super']]%>  
 
 		<%= f.label :password %>
 		<%= f.password_field :password %>
